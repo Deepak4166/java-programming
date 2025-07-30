@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int salary = sc.nextInt();
+        double gross_salary = 0.0;
+        
+        if(salary < 15000){
+            gross_salary = salary + (salary * 0.15) + (salary * 0.90);
+            
+        }
+        
+        else if(salary >= 15000){
+            gross_salary = salary + 5000 + (salary * 0.98);
+            
+        }
+        
+        System.out.printf("%.2f",gross_salary);
+        
+        
+    }
+}
