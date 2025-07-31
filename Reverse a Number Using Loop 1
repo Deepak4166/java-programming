@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        long num=sc.nextLong();
+        long sum = 0l;
+        
+        if(num < 0){
+            System.out.println("Invalid Input");
+        }
+        else{
+            while(num!=0){
+                long div=num%10;
+                System.out.print(div);
+                num = num/10;
+                
+            }
+            
+            
+        }
+    }
+}
