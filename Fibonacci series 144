@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        
+        
+        
+        if(n > 0 && n <= 20 && m > 0 && m <= 20)
+        {
+            int last=1;
+            int slast=0;
+            int i=3;
+            float count=0;
+            
+            while(i<=m){
+                int cur=last + slast;
+                slast=last;
+                last=cur;
+                
+                if(i >= n){
+                    count = count + last;
+                    
+                }
+                
+                
+                i++;
+            }
+            
+            
+        
+            System.out.printf("The Sum of Fibonacci value is %.1f",count);
+        }
+        else
+        {
+             System.out.println("Invalid Input");
+        }
+    }
+}
