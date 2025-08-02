@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        
+        String s=sc.next();
+        int a=0,b=0;
+        
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i) == '#')
+                a++;
+            else 
+                b++;
+            
+        }
+        int result = Math.abs(a-b);
+        if(result == 0) System.out.println(0);
+        else if(result %2 == 0)
+            System.out.printf("The Difference of the character in the given string: 0%d",result);
+        else
+            System.out.printf("The Difference of the character in the given string: 00%d",result);
+        
+    }
+}
